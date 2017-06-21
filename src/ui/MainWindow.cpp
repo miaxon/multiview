@@ -13,20 +13,22 @@
 
 #include "MainWindow.h"
 
-MainWindow::MainWindow()
+MainWindow::MainWindow():ui(new Ui::MainWindow)
 {
-    ui.setupUi(this);
+    ui->setupUi(this);
     bindPageMenu();
 }
 
 MainWindow::~MainWindow()
 {
+    delete ui;
 }
 
 void MainWindow::bindPageMenu()
 {
-    ui.actionStartPage->setProperty(TARGET_PAGE, START_PAGE);
-    ui.actionUsersPage->setProperty(TARGET_PAGE, USERS_PAGE);
+    QObjectUserData* d = new QObjectUserData;
+    ui->actionStartPage->setProperty(TARGET_PAGE, START_PAGE);
+    ui->actionUsersPage->setProperty(TARGET_PAGE, USERS_PAGE);
 }
 
 void MainWindow::menuAction(QAction* action)
@@ -42,17 +44,17 @@ void MainWindow::setPage(const QString& name)
     if (!page)
         return;
 
-    if (ui.stackedWidget->currentWidget() == page)
+    if (ui->stackedWidget->currentWidget() == page)
         return;
 
-    if (ui.stackedWidget->indexOf(page) < 0)
-        ui.stackedWidget->addWidget(page);
+    if (ui->stackedWidget->indexOf(page) < 0)
+        ui->stackedWidget->addWidget(page);
 
     if (pager.currentPage)
         pager.currentPage->beforeDown();
 
     page->beforeUp();
-    ui.stackedWidget->setCurrentWidget(page);
+    ui->stackedWidget->setCurrentWidget(page);
     pager.currentPage = page;
     this->setWindowTitle(page->name());
 }

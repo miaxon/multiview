@@ -25,7 +25,7 @@ public:
     virtual ~MainWindow();
     
 private:
-    Ui::MainWindow ui;
+    Ui::MainWindow *ui;
     Pager pager;
     void setPage(const QString& name);
     void bindPageMenu();

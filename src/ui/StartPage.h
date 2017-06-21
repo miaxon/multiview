@@ -13,7 +13,7 @@
 
 #ifndef _STARTPAGE_H
 #define _STARTPAGE_H
-#include "libui.h"
+#include "uicommon.h"
 #include "ui_StartPage.h"
 #define START_PAGE "StartPage"
 

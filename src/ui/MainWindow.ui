@@ -36,6 +36,8 @@
     <addaction name="actionStartPage"/>
     <addaction name="actionUsersPage"/>
     <addaction name="actionGroupsPage"/>
+    <addaction name="separator"/>
+    <addaction name="actionNew_Window"/>
    </widget>
    <addaction name="menuPages"/>
   </widget>
@@ -52,7 +54,12 @@
   </action>
   <action name="actionGroupsPage">
    <property name="text">
-    <string>GroupsPage</string>
+    <string>&amp;GroupsPage</string>
+   </property>
+  </action>
+  <action name="actionNew_Window">
+   <property name="text">
+    <string>New Window</string>
    </property>
   </action>
  </widget>

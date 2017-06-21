@@ -16,7 +16,7 @@
 
 #include <QtCore>
 #include <QMap>
-#include "libui.h"
+#include "uicommon.h"
 using namespace libui;
 class Pager {
 public:
