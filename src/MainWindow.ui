@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1035</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1035</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPages">
+    <property name="title">
+     <string>&amp;Pages</string>
+    </property>
+    <addaction name="actionStartPage"/>
+    <addaction name="actionUsersPage"/>
+    <addaction name="actionGroupsPage"/>
+   </widget>
+   <addaction name="menuPages"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionStartPage">
+   <property name="text">
+    <string>&amp;StartPage</string>
+   </property>
+  </action>
+  <action name="actionUsersPage">
+   <property name="text">
+    <string>&amp;UsersPage</string>
+   </property>
+  </action>
+  <action name="actionGroupsPage">
+   <property name="text">
+    <string>GroupsPage</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>menubar</sender>
+   <signal>triggered(QAction*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuAction(QAction*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>10</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>menuAction(QAction*)</slot>
+ </slots>
+</ui>
