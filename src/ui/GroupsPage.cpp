@@ -4,21 +4,21 @@
  * and open the template in the editor.
  */
 
-/* 
- * File:   libui.h
+/*
+ * File:   GroupsPage.cpp
  * Author: alexcon
  *
- * Created on June 21, 2017, 12:53 PM
+ * Created on June 22, 2017, 12:30 AM
  */
 
-#ifndef LIBUI_H
-#define LIBUI_H
-
-#define TARGET_PAGE "page"
-
-#include "BasePage.h"
-#include "StartPage.h"
-#include "UsersPage.h"
 #include "GroupsPage.h"
-#endif /* LIBUI_H */
+using namespace libui;
+GroupsPage::GroupsPage()
+{
+    ui.setupUi(this);
+    m_name = GROUPS_PAGE;
+}
 
+GroupsPage::~GroupsPage()
+{
+}

@@ -28,6 +28,8 @@ void MainWindow::bindPageMenu()
 {
     ui->actionStartPage->setProperty(TARGET_PAGE, START_PAGE);
     ui->actionUsersPage->setProperty(TARGET_PAGE, USERS_PAGE);
+    ui->actionGroupsPage->setProperty(TARGET_PAGE, GROUPS_PAGE);
+    
 }
 
 void MainWindow::menuAction(QAction* action)

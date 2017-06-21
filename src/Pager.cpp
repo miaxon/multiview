@@ -17,6 +17,7 @@ Pager::Pager():currentPage(nullptr)
 {    
     insert(new StartPage);
     insert(new UsersPage);
+    insert(new GroupsPage);
 }
 
 void Pager::insert(BasePage *page)
