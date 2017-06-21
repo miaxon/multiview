@@ -54,8 +54,8 @@ find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
 find_package(Qt5Network REQUIRED)
 
-add_executable(dsrclient ${OS_BUNDLE} ${SRC_LIST}
+add_executable(multiview ${OS_BUNDLE} ${SRC_LIST}
     ${UI_LIST} ${H_LIST} ${RC_LIST}
     ${META_FILES_TO_INCLUDE} ${RESOURCE_FILES}
     )
-target_link_libraries(dsrclient Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Network)
+target_link_libraries(multiview Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Network)
